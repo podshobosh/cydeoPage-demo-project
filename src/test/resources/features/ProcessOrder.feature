@@ -1,6 +1,5 @@
 @smoke
 Feature: Making an Oder Functionality
-
   Scenario Outline: Cydeo Web Table App Placing an Order functionality
   Agile Story: As a user I should be able to enter the required information
   in order to process/create a new order
@@ -27,3 +26,11 @@ Feature: Making an Oder Functionality
     Examples:
       | quantity | customerName | streetAddress | city        | state | zip   | cardType | cardNumber       | expirationDate | expectedName |
       | 3        | Joe Dumar    | 1234 Street   | San Antonio | TX    | 12345 | Visa     | 1111222233334444 | 12/28          | Joe Dumar    |
+
+
+  Scenario: Cydeo WebTable App Reset Fields functionality in Order page
+    Given user is already logged on to the Web Tables App
+    And user is on the Oder page
+    And all the requied fields for processing an order are filledout
+    When user clicks Reset Fields button
+    Then all the field should be emptied
