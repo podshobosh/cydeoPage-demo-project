@@ -6,6 +6,7 @@ import com.cydeo.pages.OrderPage;
 import com.cydeo.pages.ViewAllOrdersPage;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,12 +30,18 @@ public class WT_OrderPageStepDefs extends BasePage {
     public void user_is_on_the_oder_page() {
         orderLink.click();
     }
-    @When("user selects one of the below options under product dropdown")
+
+
+    /*@When("user selects one of the below options under product dropdown")
     public void user_selects_one_of_the_below_options_under_product_dropdown(List<String> options) {
-       for (String option : options) {
-           BrowserUtils.selectOptionFromDropdown(Driver.getDriver(), orderPage.productDropdown, option);
-       }
+        for (String option : options) {
+            BrowserUtils.selectOptionFromDropdown(Driver.getDriver(), orderPage.productDropdown, option);
+        }
     }
+
+     */
+
+
     @When("user enters quantity {string}")
     public void user_enters_quantity(String expectedQuantity) {
         orderPage.quantityInput.sendKeys(Keys.BACK_SPACE + expectedQuantity);
@@ -87,4 +94,12 @@ public class WT_OrderPageStepDefs extends BasePage {
         Assert.assertEquals(actualName, expectedName);
     }
 
+    @And("user selects one of the  {string} under product dropdown")
+    public void userSelectsOneOfTheUnderProductDropdown(String option) {
+
+        BrowserUtils.selectOptionFromDropdown(Driver.getDriver(), orderPage.productDropdown, option);
+
+    }
 }
+
+
