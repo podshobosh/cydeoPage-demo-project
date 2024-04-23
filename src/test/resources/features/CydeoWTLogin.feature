@@ -1,4 +1,4 @@
-@wip
+@smoke
 Feature: Cydeo Web Tables Application Login Functionality
   Agile Story: The user should be able to log in to their account by providing the required credentials
 

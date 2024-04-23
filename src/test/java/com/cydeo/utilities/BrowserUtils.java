@@ -2,6 +2,8 @@ package com.cydeo.utilities;
 
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -73,6 +75,12 @@ public class BrowserUtils
                 each.click();
             }
         }
+    }
+
+    public static void selectOptionFromDropdown(WebDriver driver, WebElement webElement, String chosenOption) {
+
+        Select select = new Select(webElement);
+        select.selectByVisibleText(chosenOption);
     }
 
 }
