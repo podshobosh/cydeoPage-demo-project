@@ -9,3 +9,10 @@ Feature: Cydeo Web Tables Application Login Functionality
       | password | Tester |
     And clicks login button
     Then user should see "orders" in the URL
+
+
+  Scenario: Negative Login Scenario
+    Given user is on the login page
+    When user enters invalid username "wrongUser" and invalid password "wrongPass"
+    And clicks login button
+    Then user should see an error message indicating invalid credentials

@@ -22,5 +22,9 @@ Feature: Making an Oder Functionality
     Then user should see "<expectedName>" in the first row of the web table
 
     Examples:
-      | options  | quantity | customerName | streetAddress | city        | state | zip   | cardType | cardNumber       | expirationDate | expectedName |
-      | MoneyCog | 3        | Joe Dumar    | 1234 Street   | San Antonio | TX    | 12345 | Visa     | 1111222233334444 | 12/28          | Joe Dumar    |
+      | options    | quantity | customerName | streetAddress | city        | state | zip   | cardType | cardNumber       | expirationDate | expectedName |
+      | Familybea  | 3        | Joe Dumar    | 1234 Street   | San Antonio | TX    | 12345 | Visa     | 1111222233334444 | 12/28          | Joe Dumar    |
+      | MoneyCog   | 1        | Sam Smith    | 1234 Street   | San Antonio | TX    | 12345 | Visa     | 1111222233334444 | 12/28          | Sam Smith    |
+      | Screenable | 2        | Joe John     | 1234 Street   | San Antonio | TX    | 12345 | Visa     | 1111222233334444 | 12/28          | Joe John     |
+      | MoneyCog   | 3        | Jon Jones    | 1234 Street   | San Antonio | TX    | 12345 | Visa     | 1111222233334444 | 12/28          | Jon Jones    |
+      | MoneyCog   | 4        | Mike Maliak  | 1234 Street   | San Antonio | TX    | 12345 | Visa     | 1111222233334444 | 12/28          | Mike Maliak  |

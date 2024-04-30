@@ -4,7 +4,7 @@ Feature: View All Orders Page functionalities
 
     Given user is already logged on to the Web Tables App
     And user is on the View all Orders page
-    When user clicks the select button
+    When user clicks the select All button
     Then all options should be checked
     When user clicks on the deselect button
     Then all options should be unchecked

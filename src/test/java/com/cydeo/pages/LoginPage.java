@@ -21,6 +21,9 @@ public class LoginPage {
     @FindBy(xpath = "//button[.='Login']")
     public WebElement loginButton;
 
+    @FindBy(xpath = "//div[@class='login__error']")
+    public WebElement errorMessage;
+
 
     public void login(){
         username.sendKeys(ConfigurationReader.getProperty("username"));

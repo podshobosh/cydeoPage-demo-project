@@ -83,4 +83,9 @@ public class BrowserUtils
         select.selectByVisibleText(chosenOption);
     }
 
+    public static void areAllCheckboxesSelected(WebDriver driver, List<WebElement> checkboxes) {
+        for (WebElement each : checkboxes) {
+            Assert.assertTrue(each.isSelected());
+        }
+    }
 }
